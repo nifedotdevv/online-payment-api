@@ -1,0 +1,33 @@
+# Dependencies (installed inside the image)
+node_modules
+npm-debug.log*
+
+# Build output (rebuilt inside the image)
+dist
+
+# Secrets and local env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Git and editor files
+.git
+.gitignore
+.vscode
+.idea
+.DS_Store
+
+# Docker files
+Dockerfile*
+docker-compose*.yml
+compose*.yml
+.dockerignore
+
+# Lint, format and test files
+eslint.config.mjs
+.prettierrc
+.prettierignore
+coverage
+*.log

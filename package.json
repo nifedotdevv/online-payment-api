@@ -1,0 +1,55 @@
+{
+  "name": "online-payment-api",
+  "version": "1.0.0",
+  "description": "Donations API with Paystack: initialize, verify and signed webhooks (Express 5, TypeScript, Drizzle, Postgres)",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only --env-file=.env src/index.ts",
+    "webhook:test": "node --env-file=.env scripts/send-test-webhook.mjs",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "keywords": [
+    "paystack",
+    "payments",
+    "donations",
+    "express",
+    "typescript",
+    "drizzle",
+    "postgres"
+  ],
+  "author": "nifedotdevv",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tsconfig/node16": "^16.1.10",
+    "@types/body-parser": "^1.19.6",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.6",
+    "@types/pg": "^8.23.1",
+    "drizzle-kit": "^0.31.11",
+    "eslint": "^10.15.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.14.0",
+    "prettier": "^3.10.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "~6.0",
+    "typescript-eslint": "^8.73.0"
+  },
+  "dependencies": {
+    "body-parser": "^2.4.0",
+    "drizzle-orm": "^0.45.4",
+    "express": "^5.3.0",
+    "pg": "^8.23.1"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,17 @@
+# Dependencies and build output
+node_modules
+dist
+
+# Secrets and local env (keep the example)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs, coverage, editor files
+*.log
+coverage
+.DS_Store
+.vscode
+.idea
